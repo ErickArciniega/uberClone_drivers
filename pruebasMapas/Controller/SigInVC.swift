@@ -20,6 +20,23 @@ class SigInVC: UIViewController {
     }
 
     @IBAction func logIn(_ sender: Any) {
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            AuthProvider.Instance.login(withEmail: emailTextField.text!, password: passwordTextField.text!) { (message) in
+                if message != nil{
+                    self.alertTheUser(title: "Problem With Authentication", message: message!)
+                }else{
+                    print("acceso concedido")
+                }
+            }
+        }
+        
+    }
+    
+    private func alertTheUser(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil);
+        alert.addAction(ok);
+        present(alert, animated: true, completion: nil);
     }
     
 

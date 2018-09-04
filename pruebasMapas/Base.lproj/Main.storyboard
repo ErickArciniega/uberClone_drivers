@@ -64,7 +64,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="4nZ-AP-iyg" id="KZj-ui-qvA"/>
                         <outlet property="passwordTextField" destination="8Cr-rm-PwN" id="YSP-6f-1ac"/>
-                        <outlet property="signUp" destination="sFE-Bj-8Qv" id="aYf-t0-oJz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
